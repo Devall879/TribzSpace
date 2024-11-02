@@ -278,4 +278,20 @@
       Copyright © 2023 Web Design Mastery. All rights reserved.
     </div>
   </body>
+  <script>
+ 
+  const navSlide = () => {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('nav ul');
+    const navLinks = document.querySelectorAll('nav li');
+
+    burger.addEventListener('click', () => {
+      navSlide();
+    });
+
+    navLinks.forEach((link, index) => {
+      link.style.display = index!== 0? 'none' : 'block';
+    });
+  }
+</script>
 </html>
